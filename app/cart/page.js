@@ -14,6 +14,21 @@ export default function Cart() {
     onClose: () => alert("Payment cancelled."),
   };
 
+  // Inside your Cart Component...
+const handleSuccess = async (reference) => {
+  // 1. Save to Database
+  await axios.post('/api/orders', {
+    userEmail: session?.user?.email || 'guest@example.com',
+    items: cart,
+    amount: total
+  });
+  
+  // 2. Clear Cart & Redirect
+  alert("Payment Successful! Order saved.");
+  // (You would add logic here to clear the cart context)
+  window.location.href = '/profile';
+};
+  
   if (cart.length === 0) return <div className="text-center mt-20 text-gray-500">Your cart is empty.</div>;
 
   return (
