@@ -1,6 +1,6 @@
 // app/layout.js
 import { ClerkProvider } from '@clerk/nextjs'
-import { CartProvider } from '@/context/CartContext';
+import { CartProvider } from '../context/CartContext';
 import './globals.css';
 
 // 1. Metadata for SEO (Updated Name)
