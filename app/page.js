@@ -2,9 +2,8 @@
 "use client";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useCart } from '@/context/CartContext';
-import Navbar from '@/components/Navbar'; 
-import ProductCard from '@/components/ProductCard'; // Assuming you separate the card component
+import { useCart } from '../context/CartContext';
+import Navbar from '../components/Navbar'; 
 
 export default function Home() {
   const [products, setProducts] = useState([]);
