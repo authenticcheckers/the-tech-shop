@@ -1,13 +1,5 @@
-/* app/globals.css */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Add any custom base styles here if needed */
-/* For example, setting a font family globally: */
-/*
-body {
-  font-family: system-ui, sans-serif;
-}
-*/
+/* Add your custom CSS below this line */
