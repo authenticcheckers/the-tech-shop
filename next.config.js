@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Transpile the specific Clerk package causing the Edge Function crash
- transpilePackages: ['@clerk/shared', '@clerk/clerk-react'],
+transpilePackages: ['@clerk/shared', '@clerk/clerk-react', '@clerk/nextjs'],
 
   // This is the core fix for the Edge compatibility using the proxy
   webpack: (config, { isServer }) => {
