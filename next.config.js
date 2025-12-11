@@ -6,12 +6,7 @@ const withTM = require('next-transpile-modules')([
   '@clerk/nextjs'
 ]);
 
-const withCSS = require('@zeit/next-css') // Import the CSS helper
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Add any specific next.js configuration here
-};
+const nextConfig = {};
 
-// Chain the configurations: first the transpiler, then the CSS handler
-module.exports = withTM(withCSS(nextConfig));
+module.exports = withTM(nextConfig);
