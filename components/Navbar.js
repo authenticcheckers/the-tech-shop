@@ -1,7 +1,7 @@
 // components/Navbar.js (Updated with Clerk components)
 "use client";
 import Link from 'next/link';
-import { useCart } from '@/context/CartContext';
+import { useCart } from '../context/CartContext';
 import { ShoppingBag, Search } from 'lucide-react';
 // Import Clerk Components
 import { UserButton, SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
