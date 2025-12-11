@@ -1,8 +1,8 @@
 // app/profile/page.js (Updated to use Clerk's auth())
 import { auth } from "@clerk/nextjs/server"; // Clerk's server auth
 import { redirect } from "next/navigation";
-import dbConnect from "@/lib/db";
-import Order from "@/models/Order";
+import dbConnect from "../../lib/db";
+import Order from "../../models/Order";
 
 export default async function Profile() {
   // Use Clerk's server-side auth to get the user ID
