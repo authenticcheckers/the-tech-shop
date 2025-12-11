@@ -1,5 +1,5 @@
 "use client";
-import { useCart } from '@/context/CartContext';
+import { useCart } from '../context/CartContext';
 import { PaystackButton } from 'react-paystack';
 
 export default function Cart() {
