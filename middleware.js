@@ -1,16 +1,18 @@
-// middleware.js
-import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { authMiddleware } from "@clerk/nextjs";
 
-const isProtectedRoute = createRouteMatcher([
-  '/admin(.*)', 
-  '/profile(.*)',
-]);
-
-export default clerkMiddleware((auth, req) => {
-  if (isProtectedRoute(req)) auth().protect();
+export default authMiddleware({
+  // Clearly define the public routes
+  publicRoutes: [
+    "/", 
+    "/cart", 
+    "/api/products", 
+    "/api/upload"
+  ],
+  // Routes that can be accessed without signing in
+  ignoredRoutes: ["/((?!api|trpc))(_next.*|.+\\.[\\w]+$)", "/favicon.ico"]
 });
 
 export const config = {
-  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
-  // "runtime" line is REMOVED
+  // The standard matcher for Next.js
+  matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
 };
