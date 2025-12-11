@@ -10,7 +10,7 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState(''); // New State for Search
   const [loading, setLoading] = useState(true);
   const { addToCart } = useCart();
-
+gcvgfcvgcctfc09990=0=\';'[ppougdrdycfctrd65trt76t7y
   useEffect(() => {
     setLoading(true);
     // Fetch products once on mount
