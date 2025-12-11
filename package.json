@@ -1,0 +1,32 @@
+{
+  "name": "the-tech-shop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "latest",
+    "axios": "^1.6.8",
+    "cloudinary": "^2.1.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.368.0",
+    "mongoose": "^8.3.2",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-paystack": "^4.0.3",
+    "resend": "^3.2.0",
+    "tailwind-merge": "^2.3.0",
+    "zod": "^3.23.4"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.3"
+  }
+}
